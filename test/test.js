@@ -1,10 +1,10 @@
-const GoogleGmail = require('../gmail')
+const GoogleGmail = require('../index')
 const {OAuth2Client} = require('google-auth-library')
 const fs = require('mz/fs')
 const path = require('path')
 const email = 'me'
-const keysFile = path.join(__dirname, '..', 'keys', 'client_secret_1013408035184-b0cgtq67iqdir7tjfs53ed8d4eh3vort.apps.googleusercontent.com.json')
-const tokenFile = path.join(__dirname, '..', 'oauth_token_test')
+const keysFile = path.join(__dirname, '..', 'keys', 'client_secret.json')
+const tokenFile = path.join(__dirname, '..', 'keys', 'oauth_token_test')
 const objKeys = require('lodash').values
 
 ;(async () => {
