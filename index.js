@@ -11,7 +11,10 @@ const {
   has,
   each
 } = require('lodash')
+
 const gmailVersion = 'v1'
+
+// Variables for lazy loading
 let google
 let gmail
 
@@ -117,7 +120,8 @@ class GoogleGmail {
    */
    async getAttachmentsFromMessageId(messageId) {
      const message = await this.getMessage(messageId)
-     return this.getAttachmentsFromMessage(message)
+     const attachments = await this.getAttachmentsFromMessage(message)
+     return attachments
    }
 
   async getAttachment(attachmentId, messageId) {
@@ -159,7 +163,8 @@ class GoogleGmail {
       userId: this.userId,
       id: messageId
     }
-    return await gmail.users.messages.trash(params)
+    const response = await gmail.users.messages.trash(params)
+    return response.data
   }
 
   /**
