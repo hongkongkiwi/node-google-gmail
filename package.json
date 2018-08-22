@@ -1,0 +1,22 @@
+{
+  "name": "google-gmail-wrapper",
+  "version": "0.0.1",
+  "description": "Wrapper around the Google Gmail APIs",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gmail",
+    "google"
+  ],
+  "author": "Andy Savage <andy@savage.hk>",
+  "license": "MIT",
+  "dependencies": {
+    "googleapis": "^33.0.0",
+    "lodash": "^4.17.10"
+  }
+}
